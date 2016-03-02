@@ -5,8 +5,18 @@
 <title>Gallery Filter</title>
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.0/jquery.min.js"></script>
 <script src="http://cdnjs.cloudflare.com/ajax/libs/gsap/latest/TweenMax.min.js"> </script>
-<link href="css/large.css" type="text/css" rel="stylesheet" /> 
+<!--<link href="css/large.css" type="text/css" rel="stylesheet" /> -->
+  
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<link href="css/mobile.css" type="text/css" rel="stylesheet" media="screen and (min-width:1px) and (max-width:500px)" />
+
+<link href="css/tablet.css" type="text/css" rel="stylesheet" media="screen and (min-width:501px) and (max-width:900px)" />
+
+<link href="css/large.css" type="text/css" rel="stylesheet" media="screen and (min-width:901px) and (max-width:2048px)" />
+
 </head>
+  
 <body class="page"> 
   
 <script>
@@ -23,6 +33,7 @@
     //firstImage.prev().addClass("error");
   
   //*******************GREENSOCK*************************
+    var animSpeed = .5;
   //TweenMax.to("#drawing", 5, {rotation:360, repeat:99} );
   //TweenMax.to("#water-color", 5, {rotation:360} );
   //TweenMax.to("#oil", 5, {rotation:360} );
@@ -30,12 +41,12 @@
   //TweenMax.to("#drawing", 2, {y:50, ease:Elastic.easeOut} );
   //TweenMax.to("#drawing", 3, {x:300, ease:Bounce.easeOut, repeat:2, yoyo:true} );
     
-    TweenMax.to("header", animSpeed, {x:500, alpha:.5, ease:Bounce.easeOut, delay: 1 } );
-    TweenMax.to("nav", animSpeed, {x:500, alpha:.5, ease:Bounce.easeOut, delay: 2 } );
-    TweenMax.to("#drawing", animSpeed, {x:500, alpha:.5, ease:Bounce.easeOut, delay: 4 } );
-    TweenMax.to("#water-color", animSpeed, {x:500, alpha:.5, ease:Bounce.easeOut, delay: 6 } );
-    TweenMax.to("#oil", animSpeed, {x:500, alpha:.5, ease:Bounce.easeOut, delay: 8 } );
-    TweenMax.to("#aside", animSpeed, {x:500, alpha:.5, ease:Bounce.easeOut, delay: 10 } );
+    //TweenMax.to("header", animSpeed, {x:50, alpha:.5, ease:Bounce.easeOut, delay: 1 } );
+    //TweenMax.to("nav", animSpeed, {x:50, alpha:.5, ease:Bounce.easeOut, delay: 2 } );
+    TweenMax.to("#drawing", animSpeed, {x:50, alpha:.5, ease:Bounce.easeOut, delay: 4 } );
+    TweenMax.to("#water-color", animSpeed, {x:50, alpha:.5, ease:Bounce.easeOut, delay: 6 } );
+    TweenMax.to("#oil", animSpeed, {x:50, alpha:.5, ease:Bounce.easeOut, delay: 8 } );
+    TweenMax.to("#aside", animSpeed, {x:50, alpha:.5, ease:Bounce.easeOut, delay: 10 } );
     
   })  //closing document.ready
   
